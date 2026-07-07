@@ -21,7 +21,8 @@ This repository contains my **day-to-day SystemVerilog practice** tasks, testben
 ```
 systemverilog-practice/
 ├── 📁 clocking/
-│     └── 01_clock_gen_alignment.sv    ← Clock generation & edge alignment ✅
+│     ├── 01_clock_gen_alignment.sv    ← 100/50/25 MHz clock alignment ✅
+│     └── waveform_01.png              ← Simulation waveform ✅
 ├── 📁 data_types/
 │     └── (coming soon)
 ├── 📁 testbench/
@@ -47,18 +48,36 @@ systemverilog-practice/
 ### 📌 Task 01 — Clock Generation & Edge Alignment
 
 **File:** `clocking/01_clock_gen_alignment.sv`
+**Waveform:** `clocking/waveform_01.png`
 
-Created a SystemVerilog testbench that:
-- Generates a **reference clock** and a **generated clock**
-- Aligns their **rising edges** to analyze phase relationship
-- Observes clock domain behavior through simulation waveform
+Created a SystemVerilog testbench generating **3 clocks** with rising edges aligned at simulation start:
 
-**Concepts covered:** `initial` block · `forever` loop · clock period · phase alignment · `$time` · waveform analysis
+| Signal | Frequency | Period | Method |
+|--------|-----------|--------|--------|
+| clk | 100 MHz | 10 ns | `always #5` toggle |
+| clk50 | 50 MHz | 20 ns | always — manual high/low timing |
+| clk25 | 25 MHz | 40 ns | always — manual high/low timing |
+| rst | — | — | active-low reset |
+
+**Key Concepts Used:**
+- ✅ `` `timescale `` directive (1ns / 1ps)
+- ✅ `initial` block for signal initialization
+- ✅ `always` block for continuous clock generation
+- ✅ Manual high/low timing for precise edge alignment
+- ✅ `$dumpfile` & `$dumpvars` for waveform capture
+- ✅ `$finish` for simulation control (200ns total run)
+
+**Waveform Output:**
+
+![Waveform Task 01](clocking/waveform_01.png)
+
+> Waveform showing clk (100MHz), clk50 (50MHz), clk25 (25MHz) and rst — all rising edges aligned at simulation start.
 
 ---
 
 ### 🎯 Learning Goals
 
+- [x] Clock generation & edge alignment
 - [ ] SystemVerilog Data Types & Variables
 - [ ] Arrays, Queues & Associative Arrays
 - [ ] Clocking Blocks & Interfaces
