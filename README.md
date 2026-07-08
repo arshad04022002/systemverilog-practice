@@ -41,7 +41,7 @@ systemverilog-practice/
 | # | Task | Topic | Status |
 |---|------|-------|--------|
 | 01 | Clock Generation & Edge Alignment | Clocking | ✅ Done |
-| 02 | Coming soon... | — | 🔜 Upcoming |
+| 02 | Data Types & Default Values | data_types | ✅ Done |
 
 ---
 
@@ -74,6 +74,24 @@ Created a SystemVerilog testbench generating **3 clocks** with rising edges alig
 > Waveform showing clk (100MHz), clk50 (50MHz), clk25 (25MHz) and rst — all rising edges aligned at simulation start.
 
 ---
+
+### 📌 Task 02 — Data Types & Default Values
+
+**File:** `data_types/01_data_types.sv`
+
+Explored default values of different SystemVerilog data types
+without any assignment to understand their initial state.
+
+| Type | Default Value | State |
+|------|--------------|-------|
+| reg | X (unknown) | 4-state |
+| logic | X (unknown) | 4-state |
+| bit | 0 | 2-state |
+| byte | 0 | 2-state |
+| int | 0 | 2-state |
+
+**Key Learning:** 4-state types (reg, logic) default to **X**
+while 2-state types (bit, byte, int) default to **0**
 
 ### 🎯 Learning Goals
 
