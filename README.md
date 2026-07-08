@@ -24,7 +24,7 @@ systemverilog-practice/
 │     ├── 01_clock_gen_alignment.sv    ← 100/50/25 MHz clock alignment ✅
 │     └── waveform_01.png              ← Simulation waveform ✅
 ├── 📁 data_types/
-│     └── (coming soon)
+│     └── 01_data_types.sv    ← Data types & default values ✅
 ├── 📁 testbench/
 │     └── (coming soon)
 ├── 📁 assertions/
@@ -96,7 +96,7 @@ while 2-state types (bit, byte, int) default to **0**
 ### 🎯 Learning Goals
 
 - [x] Clock generation & edge alignment
-- [ ] SystemVerilog Data Types & Variables
+- [x] SystemVerilog Data Types & Variables
 - [ ] Arrays, Queues & Associative Arrays
 - [ ] Clocking Blocks & Interfaces
 - [ ] OOP — Classes, Inheritance, Polymorphism
