@@ -94,19 +94,8 @@ without any assignment to understand their initial state.
 
 **Key Learning:** 4-state types (reg, logic) default to **X**
 while 2-state types (bit, byte, int) default to **0**
-
-### 🎯 Learning Goals
-
-- [x] Clock generation & edge alignment
-- [x] SystemVerilog Data Types & Variables
-- [ ] Arrays, Queues & Associative Arrays
-- [ ] Clocking Blocks & Interfaces
-- [ ] OOP — Classes, Inheritance, Polymorphism
-- [ ] Assertions (SVA — SystemVerilog Assertions)
-- [ ] Randomization & Constraints
-- [ ] Testbench Components — Driver, Monitor, Scoreboard
-
 ---
+
 ### 📌 Task 03 — Static Arrays
 
 **File:** `data_types/02_static_arrays.sv`
@@ -131,6 +120,18 @@ data types and initialization methods.
 - Repetitive pattern `'{5{0}}`
 - Default value `'{default:2}`
 - `%0p` format specifier for array display
+
+### 🎯 Learning Goals
+
+- [x] Clock generation & edge alignment
+- [x] SystemVerilog Data Types & Variables
+- [ ] Arrays, Queues & Associative Arrays
+- [ ] Clocking Blocks & Interfaces
+- [ ] OOP — Classes, Inheritance, Polymorphism
+- [ ] Assertions (SVA — SystemVerilog Assertions)
+- [ ] Randomization & Constraints
+- [ ] Testbench Components — Driver, Monitor, Scoreboard
+
 
 ### 🛠 Tools Used
 
