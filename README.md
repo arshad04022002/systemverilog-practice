@@ -24,7 +24,8 @@ systemverilog-practice/
 │     ├── 01_clock_gen_alignment.sv    ← 100/50/25 MHz clock alignment ✅
 │     └── waveform_01.png              ← Simulation waveform ✅
 ├── 📁 data_types/
-│     └── 01_data_types.sv    ← Data types & default values ✅
+│     ├── 01_data_types.sv    ← Data types & default values ✅
+│     └── 02_static_arrays.sv ← Static arrays ✅
 ├── 📁 testbench/
 │     └── (coming soon)
 ├── 📁 assertions/
@@ -42,6 +43,7 @@ systemverilog-practice/
 |---|------|-------|--------|
 | 01 | Clock Generation & Edge Alignment | Clocking | ✅ Done |
 | 02 | Data Types & Default Values | data_types | ✅ Done |
+| 03 | Static Arrays | data_types | ✅ Done |
 
 ---
 
@@ -105,6 +107,30 @@ while 2-state types (bit, byte, int) default to **0**
 - [ ] Testbench Components — Driver, Monitor, Scoreboard
 
 ---
+### 📌 Task 03 — Static Arrays
+
+**File:** `data_types/02_static_arrays.sv`
+
+Explored static arrays in SystemVerilog using different 
+data types and initialization methods.
+
+| Array | Type | Description |
+|-------|------|-------------|
+| arr1 | bit | Initialized with values 1-5 |
+| arr2 | logic | Initialized with values 1-5 |
+| arr3 | logic | Initialized with values 1-4 |
+| arr4 | int | Initialized with values 1-4 |
+| arr5 | logic | No initialization — default X |
+| arr6 | int | No initialization — default 0 |
+| arr7 | int | Repetitive init — '{5{0}} |
+| arr8 | int | Default value init — '{default:2} |
+
+**Key Concepts Used:**
+- Static array declaration & sizing
+- Array initialization using `'{}` syntax
+- Repetitive pattern `'{5{0}}`
+- Default value `'{default:2}`
+- `%0p` format specifier for array display
 
 ### 🛠 Tools Used
 
