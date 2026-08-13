@@ -24,8 +24,9 @@ systemverilog-practice/
 │     ├── 01_clock_gen_alignment.sv    ← 100/50/25 MHz clock alignment ✅
 │     └── waveform_01.png              ← Simulation waveform ✅
 ├── 📁 data_types/
-│     ├── 01_data_types.sv    ← Data types & default values ✅
-│     └── 02_static_arrays.sv ← Static arrays ✅
+│     ├── 01_data_types.sv      ← Data types & default values ✅
+│     ├── 02_static_arrays.sv   ← Static arrays ✅
+│     └── 03_dynamic_arrays.sv  ← Dynamic arrays ✅
 ├── 📁 testbench/
 │     └── (coming soon)
 ├── 📁 assertions/
@@ -44,6 +45,7 @@ systemverilog-practice/
 | 01 | Clock Generation & Edge Alignment | Clocking | ✅ Done |
 | 02 | Data Types & Default Values | data_types | ✅ Done |
 | 03 | Static Arrays | data_types | ✅ Done |
+| 04 | Dynamic Arrays | data_types | ✅ Done |
 
 ---
 
@@ -120,6 +122,22 @@ data types and initialization methods.
 - Repetitive pattern `'{5{0}}`
 - Default value `'{default:2}`
 - `%0p` format specifier for array display
+
+### 📌 Task 04 — Dynamic Arrays
+
+**File:** `data_types/03_dynamic_arrays.sv`
+
+Explored dynamic arrays in SystemVerilog — arrays whose
+size can be allocated and changed at runtime using `new[]`.
+
+**Key Concepts Used:**
+- `int arr[]` — dynamic array declaration (no size at compile time)
+- `new[5]` — allocate size at runtime
+- `for` loop — fill array with values
+- `new[15](arr)` — resize while **preserving** old data
+- `new[15]` — resize and **reset** all elements to 0
+- `arr.delete()` — delete entire array
+- `%0p` — display full array contents
 
 ### 🎯 Learning Goals
 
