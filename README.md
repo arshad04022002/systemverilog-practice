@@ -167,7 +167,7 @@ both FIFO and LIFO operations using built-in methods.
 
 - [x] Clock generation & edge alignment
 - [x] SystemVerilog Data Types & Variables
-- [ ] Arrays, Queues & Associative Arrays
+- [x] Arrays, Queues & Associative Arrays
 - [ ] Clocking Blocks & Interfaces
 - [ ] OOP — Classes, Inheritance, Polymorphism
 - [ ] Assertions (SVA — SystemVerilog Assertions)
