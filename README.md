@@ -26,7 +26,8 @@ systemverilog-practice/
 ├── 📁 data_types/
 │     ├── 01_data_types.sv      ← Data types & default values ✅
 │     ├── 02_static_arrays.sv   ← Static arrays ✅
-│     └── 03_dynamic_arrays.sv  ← Dynamic arrays ✅
+│     ├── 03_dynamic_arrays.sv  ← Dynamic arrays ✅
+│     └── 04_queues.sv          ← Queues ✅
 ├── 📁 testbench/
 │     └── (coming soon)
 ├── 📁 assertions/
@@ -46,6 +47,7 @@ systemverilog-practice/
 | 02 | Data Types & Default Values | data_types | ✅ Done |
 | 03 | Static Arrays | data_types | ✅ Done |
 | 04 | Dynamic Arrays | data_types | ✅ Done |
+| 05 | Queues | data_types | ✅ Done |
 
 ---
 
@@ -122,6 +124,7 @@ data types and initialization methods.
 - Repetitive pattern `'{5{0}}`
 - Default value `'{default:2}`
 - `%0p` format specifier for array display
+---
 
 ### 📌 Task 04 — Dynamic Arrays
 
@@ -138,6 +141,27 @@ size can be allocated and changed at runtime using `new[]`.
 - `new[15]` — resize and **reset** all elements to 0
 - `arr.delete()` — delete entire array
 - `%0p` — display full array contents
+---
+
+### 📌 Task 05 — Queues
+
+**File:** `data_types/04_queues.sv`
+
+Explored queues in SystemVerilog — a dynamic FIFO-like
+data structure that can grow and shrink from both ends.
+
+| Method | Operation |
+|--------|-----------|
+| `arr = {1,2,3}` | Initialize queue |
+| `push_front(7)` | Add element at front |
+| `push_back(9)` | Add element at back |
+| `insert(2,10)` | Insert at specific index |
+| `pop_front()` | Remove & return front element |
+| `pop_back()` | Remove & return back element |
+| `delete(1)` | Delete element at index 1 |
+
+**Key Learning:** Queue `[$]` is unbounded and supports
+both FIFO and LIFO operations using built-in methods.
 
 ### 🎯 Learning Goals
 
