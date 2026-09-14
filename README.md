@@ -28,6 +28,8 @@ systemverilog-practice/
 │     ├── 02_static_arrays.sv   ← Static arrays ✅
 │     ├── 03_dynamic_arrays.sv  ← Dynamic arrays ✅
 │     └── 04_queues.sv          ← Queues ✅
+├── 📁 oops/
+│     └── 01_class_basics.sv    ← Class basics ✅
 ├── 📁 testbench/
 │     └── (coming soon)
 ├── 📁 assertions/
@@ -48,6 +50,7 @@ systemverilog-practice/
 | 03 | Static Arrays | data_types | ✅ Done |
 | 04 | Dynamic Arrays | data_types | ✅ Done |
 | 05 | Queues | data_types | ✅ Done |
+| 06 | Class Basics | oops | ✅ Done |
 
 ---
 
@@ -162,6 +165,27 @@ data structure that can grow and shrink from both ends.
 
 **Key Learning:** Queue `[$]` is unbounded and supports
 both FIFO and LIFO operations using built-in methods.
+---
+
+### 📌 Task 06 — Class Basics
+
+**File:** `oops/01_class_basics.sv`
+
+Explored basic class concept in SystemVerilog — defining
+a class, creating an object and accessing class members.
+
+| Concept | Description |
+|---------|-------------|
+| `class first` | Class definition with 2 data members |
+| `bit [2:0] data1` | 3-bit class property |
+| `bit [1:0] data2` | 2-bit class property |
+| `f = new()` | Object creation & memory allocation |
+| `f.data1` | Accessing class member using dot operator |
+| `f = null` | Memory deallocation (commented) |
+
+**Key Learning:** In SV, classes are dynamic objects —
+memory is allocated using `new()` and can be freed
+using `null`. Properties are accessed via dot operator.
 
 ### 🎯 Learning Goals
 
@@ -169,7 +193,7 @@ both FIFO and LIFO operations using built-in methods.
 - [x] SystemVerilog Data Types & Variables
 - [x] Arrays, Queues & Associative Arrays
 - [ ] Clocking Blocks & Interfaces
-- [ ] OOP — Classes, Inheritance, Polymorphism
+- [ ] OOP — Classes, Inheritance, Polymorphism 🔄 In Progress
 - [ ] Assertions (SVA — SystemVerilog Assertions)
 - [ ] Randomization & Constraints
 - [ ] Testbench Components — Driver, Monitor, Scoreboard
