@@ -29,7 +29,8 @@ systemverilog-practice/
 │     ├── 03_dynamic_arrays.sv  ← Dynamic arrays ✅
 │     └── 04_queues.sv          ← Queues ✅
 ├── 📁 oops/
-│     └── 01_class_basics.sv    ← Class basics ✅
+│     ├── 01_class_basics.sv   ← Class basics ✅
+│     └── 02_functions.sv      ← Functions ✅
 ├── 📁 testbench/
 │     └── (coming soon)
 ├── 📁 assertions/
@@ -51,6 +52,7 @@ systemverilog-practice/
 | 04 | Dynamic Arrays | data_types | ✅ Done |
 | 05 | Queues | data_types | ✅ Done |
 | 06 | Class Basics | oops | ✅ Done |
+| 07 | Functions | oops | ✅ Done |
 
 ---
 
@@ -186,6 +188,26 @@ a class, creating an object and accessing class members.
 **Key Learning:** In SV, classes are dynamic objects —
 memory is allocated using `new()` and can be freed
 using `null`. Properties are accessed via dot operator.
+---
+
+### 📌 Task 07 — Functions
+
+**File:** `oops/02_functions.sv`
+
+Explored functions in SystemVerilog — both value-returning
+and void functions.
+
+| Function | Return Type | Description |
+|----------|-------------|-------------|
+| `add()` | `bit [4:0]` | Returns sum of ain + bin |
+| `display_ain_bin()` | `void` | Displays values of ain and bin |
+
+**Key Learning:**
+- `function` keyword for defining reusable logic blocks
+- Value-returning function using `return` statement
+- `void` function for display/print operations only
+- Functions cannot consume simulation time (`#` delays)
+---
 
 ### 🎯 Learning Goals
 
