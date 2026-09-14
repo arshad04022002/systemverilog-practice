@@ -31,6 +31,7 @@ systemverilog-practice/
 ├── 📁 oops/
 │     ├── 01_class_basics.sv   ← Class basics ✅
 │     └── 02_functions.sv      ← Functions ✅
+│     └── 03_tasks.sv          ← Tasks ✅
 ├── 📁 testbench/
 │     └── (coming soon)
 ├── 📁 assertions/
@@ -53,6 +54,7 @@ systemverilog-practice/
 | 05 | Queues | data_types | ✅ Done |
 | 06 | Class Basics | oops | ✅ Done |
 | 07 | Functions | oops | ✅ Done |
+| 08 | Tasks | oops | ✅ Done |
 
 ---
 
@@ -207,6 +209,29 @@ and void functions.
 - Value-returning function using `return` statement
 - `void` function for display/print operations only
 - Functions cannot consume simulation time (`#` delays)
+---
+
+### 📌 Task 08 — Tasks
+
+**File:** `oops/03_tasks.sv`
+
+Explored tasks in SystemVerilog — reusable procedural
+blocks that can consume simulation time unlike functions.
+
+| Task | Description |
+|------|-------------|
+| `add()` | Adds a+b and displays result |
+| `stim_a_b()` | Sequential stimulus with #10 delays |
+| `stim_clk()` | Clock-synchronized stimulus using `@(posedge clk)` |
+
+**Key Concepts Used:**
+- `task` keyword — can consume simulation time (`#` delays)
+- `always #5` — 100MHz clock generation
+- `@(posedge clk)` — wait for clock edge
+- `$urandom` — random value generation
+- `for` loop calling task 11 times
+- Difference between `task` (time-consuming) vs `function` (no time)
+- `$finish` — stops always block simulation
 ---
 
 ### 🎯 Learning Goals
