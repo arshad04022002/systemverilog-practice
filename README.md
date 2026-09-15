@@ -32,6 +32,7 @@ systemverilog-practice/
 │     ├── 01_class_basics.sv   ← Class basics ✅
 │     └── 02_functions.sv      ← Functions ✅
 │     └── 03_tasks.sv          ← Tasks ✅
+│     └── 04_task_pass_by_value.sv  ← Task pass by value ✅
 ├── 📁 testbench/
 │     └── (coming soon)
 ├── 📁 assertions/
@@ -55,6 +56,7 @@ systemverilog-practice/
 | 06 | Class Basics | oops | ✅ Done |
 | 07 | Functions | oops | ✅ Done |
 | 08 | Tasks | oops | ✅ Done |
+| 09 | Task — Pass by Value | oops | ✅ Done |
 
 ---
 
@@ -232,6 +234,25 @@ blocks that can consume simulation time unlike functions.
 - `for` loop calling task 11 times
 - Difference between `task` (time-consuming) vs `function` (no time)
 - `$finish` — stops always block simulation
+---
+
+### 📌 Task 09 — Task Pass by Value
+
+**File:** `oops/04_task_pass_by_value.sv`
+
+Explored pass by value behavior in SystemVerilog tasks
+using a swap example to understand scope of changes.
+
+| Variable | Before swap | After swap (inside task) | After swap (outside task) |
+|----------|-------------|--------------------------|---------------------------|
+| a | 3 | 2 | 3 |
+| b | 2 | 3 | 2 |
+
+**Key Learning:**
+- By default tasks use **pass by value** — a copy is passed
+- Changes inside task do **NOT** reflect outside
+- To reflect changes outside use `ref` keyword instead
+- This is a critical concept for verification testbenches
 ---
 
 ### 🎯 Learning Goals
