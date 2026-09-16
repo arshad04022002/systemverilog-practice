@@ -35,6 +35,7 @@ systemverilog-practice/
 │     ├── 04_task_pass_by_value.sv     ← Pass by value ✅
 │     └── 05_pass_by_reference.sv      ← Pass by reference ✅
 │     └── 06_constructor.sv      ← Constructor ✅
+│     └── 07_this_keyword.sv       ← this keyword ✅
 ├── 📁 assertions/
 │     └── (coming soon)
 ├── 📁 randomization/
@@ -59,6 +60,7 @@ systemverilog-practice/
 | 09 | Pass by Value | oops | ✅ Done |
 | 10 | Pass by Reference | oops | ✅ Done |
 | 11 | Constructor | oops | ✅ Done |
+| 12 | this Keyword & Named Arguments | oops | ✅ Done |
 
 ---
 
@@ -201,6 +203,28 @@ class — default and parameterized initialization.
 - `new()` without argument → uses default value (0)
 - `new(23)` with argument → initializes data to 23
 - Constructor runs automatically when object is created
+
+---
+
+### 📌 Task 12 — this Keyword & Named Arguments
+
+**File:** `oops/07_this_keyword.sv`
+
+Explored `this` keyword for resolving name conflict between
+class data members and constructor arguments, and named
+argument passing in constructor call.
+
+| Concept | Example |
+|---------|---------|
+| `this` keyword | `this.data1 = data1` |
+| Positional args | `new(16, 254, 256, 512)` |
+| Named args | `new(.data4(12), .data2(15))` |
+
+**Key Learning:**
+- `this` refers to **current object's** data member
+- Resolves conflict when argument & member have same name
+- Named arguments allow passing in **any order**
+- Positional arguments must follow **declared order**
 
 ---
 
