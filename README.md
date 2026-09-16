@@ -36,6 +36,7 @@ systemverilog-practice/
 │     └── 05_pass_by_reference.sv      ← Pass by reference ✅
 │     └── 06_constructor.sv      ← Constructor ✅
 │     └── 07_this_keyword.sv       ← this keyword ✅
+│     └── 08_nested_classes.sv     ← Nested classes ✅
 ├── 📁 assertions/
 │     └── (coming soon)
 ├── 📁 randomization/
@@ -61,6 +62,7 @@ systemverilog-practice/
 | 10 | Pass by Reference | oops | ✅ Done |
 | 11 | Constructor | oops | ✅ Done |
 | 12 | this Keyword & Named Arguments | oops | ✅ Done |
+| 13 | Nested Classes | oops | ✅ Done |
 
 ---
 
@@ -225,6 +227,29 @@ argument passing in constructor call.
 - Resolves conflict when argument & member have same name
 - Named arguments allow passing in **any order**
 - Positional arguments must follow **declared order**
+
+---
+
+### 📌 Task 13 — Nested Classes
+
+**File:** `oops/08_nested_classes.sv`
+
+Explored nested classes in SystemVerilog — a class
+containing an object of another class as a member.
+
+| Concept | Example |
+|---------|---------|
+| Outer class | `class second` contains `first f1` |
+| Inner class object | `first f1` declared inside `second` |
+| Constructor chaining | `second.new()` calls `f1 = new()` |
+| Nested access | `s.f1.data` — dot chaining |
+| Nested task call | `s.f1.display()` |
+
+**Key Learning:**
+- A class can contain **object of another class** as member
+- Inner object must be created inside outer constructor
+- Members accessed via **chained dot operator** `s.f1.data`
+- Inner object data can be read and modified from outside
 
 ---
 
