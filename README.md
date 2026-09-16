@@ -34,6 +34,7 @@ systemverilog-practice/
 │     ├── 03_tasks.sv                  ← Tasks ✅
 │     ├── 04_task_pass_by_value.sv     ← Pass by value ✅
 │     └── 05_pass_by_reference.sv      ← Pass by reference ✅
+│     └── 06_constructor.sv      ← Constructor ✅
 ├── 📁 assertions/
 │     └── (coming soon)
 ├── 📁 randomization/
@@ -57,6 +58,7 @@ systemverilog-practice/
 | 08 | Tasks | oops | ✅ Done |
 | 09 | Pass by Value | oops | ✅ Done |
 | 10 | Pass by Reference | oops | ✅ Done |
+| 11 | Constructor | oops | ✅ Done |
 
 ---
 
@@ -178,6 +180,27 @@ systemverilog-practice/
 | Outside task | 2 | 1 |
 
 **Key Learning:** `ref` keyword passes **original variable** — changes reflect outside · requires `task automatic`
+
+---
+
+### 📌 Task 11 — Constructor
+
+**File:** `oops/06_constructor.sv`
+
+Explored constructor (`new` function) in SystemVerilog
+class — default and parameterized initialization.
+
+| Call | Output |
+|------|--------|
+| `f1 = new()` | data = 0 (default value) |
+| `f1 = new(23)` | data = 23 (custom value) |
+
+**Key Learning:**
+- `function new()` is the constructor in SV class
+- Default argument `input int datain = 0` sets fallback value
+- `new()` without argument → uses default value (0)
+- `new(23)` with argument → initializes data to 23
+- Constructor runs automatically when object is created
 
 ---
 
